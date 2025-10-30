@@ -23,6 +23,8 @@ footer{
 }
 img{
     display: block;
+    width: 100%;
+    height: auto;
 }
 .visually-hidden {
     position: absolute;
@@ -85,7 +87,13 @@ h2{
     line-height: 117%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-right: 76px;
+    /* margin-right: 76px; */
+}
+
+@media (min-width: 1158px){
+    .logo{
+        margin-right: 76px;
+    }
 }
 
 .logo_header{
@@ -148,24 +156,39 @@ h2{
     display: flex;
     align-items: center;
 }
-.header-nav {
+@media (min-width: 768px) {
+    .header-nav {
+      flex-grow: 1;
+      /* margin-right: 28px; */
+    }
+  }
+
+/* .header-nav {
     display: flex;
     gap: 40px;
-}
+} */
 
-@media (min-width: 768px){
+/* @media (min-width: 768px) and (max-width: 1158px){
     .header-nav {
-        justify-content: center;
+        justify-content: space-between;
     }
-}
+} */
 
 .nav-list{
     display: flex;
     gap: 40px;
     flex-grow: 1;
+    /* width: 100%;
+    justify-content: center; */
 }
 
-@media (max-width: 768px){
+@media (min-width: 768px) and (max-width: 1157px){
+    .nav-list{
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media (max-width: 1158px){
     .header-nav{
         justify-content: space-between;
     }
@@ -173,13 +196,6 @@ h2{
 
 
 /* ITEMS LIST */
-
-@media (min-width: 768px) {
-    .header-nav {
-      flex-grow: 1;
-      margin-right: 28px;
-    }
-  }
 
 .nav-list-item a{
     font-weight: 500;
@@ -209,7 +225,7 @@ h2{
     border-radius: 2px; 
     bottom: -1px;
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
     .nav-list{
         display: none;
     }
@@ -238,7 +254,7 @@ h2{
     color: #404bbf;
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
     .address-list{
         display: none;
     }
@@ -267,7 +283,8 @@ h2{
 }
 
 .order-section{
-    padding: 52px 0;
+    /* padding: 52px 0; */
+    padding: 72px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images//bg-image/s-bg.jpg); 
     background-size: cover;
     margin: 0 auto;
@@ -396,21 +413,13 @@ h2{
     }
 }
 
-
-/* .list-item-header{
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 120%;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    margin-bottom: 8px;
-} */
 .list-item-header{
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
     line-height: 111%;
     letter-spacing: 0.02em;
-    color: #2e2f42;
+    text-align: center;
+    color: #2E2F42;
     margin-bottom: 8px;
 }
 @media (max-width: 767px){
@@ -481,6 +490,7 @@ h2{
 .list-item-container{
     padding: 32px 0;
     text-align: center;
+    align-items: center;
 }
 
 /* .team-list{
@@ -490,6 +500,7 @@ h2{
 .team-list{
     display: flex;
     flex-direction: column;
+    align-items: center; 
     gap: 72px;
 }
 
@@ -503,7 +514,7 @@ h2{
 }
 
 .team-list-item{
-    width: 100%; 
+    /* width: 100%;  */
     max-width: 264px; 
     border-radius: 0px 0px 4px 4px; 
     background-color: #fff;
@@ -565,7 +576,7 @@ h2{
 }
 
 
-.list-item-header{
+.list-team-header{
     font-size: 20px;
     line-height: 120%;
     letter-spacing: 0.02em;
@@ -573,7 +584,7 @@ h2{
     color: #2e2f42 ;
 }
 
-.list-item-text{
+.list-team-text{
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
@@ -633,7 +644,7 @@ h2{
 
 @media (min-width: 768px){
     .portfolio-list-item{
-        width: calc((100% - 48px) / 2);
+        width: calc((100% - 24px) / 2);
     }
     
 }
@@ -710,9 +721,15 @@ footer {
 .footer-wrapper{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 72px;
 } 
+@media(max-width: 767px){
+    .footer-wrapper{
+        align-items: center;
+    } 
+}
+
 @media (min-width: 768px){
     .footer-wrapper{
         flex-wrap: wrap;
@@ -959,7 +976,7 @@ footer .logo {
 }
 
 .modal{
-    max-width: 408px;
+    /* min-width: 288px; */
     min-width: 288px;
     min-height: 584px;
     padding: 72px 24px 16px 16px; 
@@ -980,6 +997,7 @@ footer .logo {
 }
 @media (min-width: 768px){
     .modal{
+        width: 409px;
         padding: 72px 24px 24px 24px; 
     }
 }
@@ -1329,7 +1347,6 @@ footer .logo {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: center;
     gap: 40px;
 }
 
